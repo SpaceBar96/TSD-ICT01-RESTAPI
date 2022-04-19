@@ -1,0 +1,42 @@
+[
+  {
+    "AuthorID": 1,
+    "AuthorName": "Jane Austen",
+    "BookID": 1,
+    "Title": "Pride",
+    "Year": 1813,
+    "Price": 25.99,
+    "Genre": "Life",
+    "BookPublish": 1
+  },
+  {
+    "AuthorID": 2,
+    "AuthorName": "Charles",
+    "BookID": 1,
+    "Title": "Parody",
+    "Year": 1997,
+    "Price": 25.99,
+    "Genre": "Comedy",
+    "BookPublish": 1
+  },
+  {
+    "AuthorID": 2,
+    "AuthorName": "Charles",
+    "BookID": 2,
+    "Title": "Ghost",
+    "Year": 1998,
+    "Price": 25.99,
+    "Genre": "Horror",
+    "BookPublish": 2
+  },
+  {
+    "AuthorID": 1,
+    "AuthorName": "Jane Austen",
+    "BookID": 2,
+    "Title": "Reaper",
+    "Year": 2000,
+    "Price": 49.99,
+    "Genre": "Thriller",
+    "BookPublish": 2
+  }
+]

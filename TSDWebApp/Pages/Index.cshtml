@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@using RESTuserAPI.Models
+@using TSDWebApp.Models
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Technology Stack Development !</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<h2>Zoo Keeper</h2>
+<table border="1" style="border: 1px solid black">
+    <tr style="background-color: gray">
+        <th style="width: 100px">Name</th>
+        <th style="width: 120px">NRIC</th>
+        <th style="width: 100px">DOB</th>
+        <th style="width: 30px">Age</th>
+    </tr>
+    @foreach (User usr in Model.Users)
+    {
+        <tr>
+            <td>@usr.Name</td>
+            <td>@usr.NRIC</td>
+            <td>@usr.DOB</td>
+            <td>@usr.Age</td>
+        </tr>
+    }
+</table>
+
+<div class="text-center"><h3>List of Monkeys in our Zoo</h3></div>
+<div class="card-columns">
+    @foreach (Monkey _monkey in Model.Monkeys)
+    {
+        <div class="card">
+            <div class="card-img" style="background-image: url('@_monkey.ImageUrl');
+                    height: 300px; border:dotted 1px; background-repeat: no-repeat; background-position: center;"></div>
+            <div class="card-body" style="background-color: forestgreen">
+                <h5 class="card-title">@_monkey.Name</h5>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,55 @@
+﻿@page
+@model TSDWebApp.Pages.DeleteUserModel
+@using RESTuserAPI.Models
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    input {
+        width: 200px;
+        padding: 6px 12px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+</style>
+
+<h2>Delete User</h2>
+<div class="container" style="border-radius:5px; background-color:#f2f2f2;">
+
+    <form method="post">
+        <div>
+            <label style="font-size:14px; font-weight:bold;" class="form-label">ID</label><br />
+            <input maxlength="100" type="text" asp-for="usr.UserID">
+        </div>
+
+        <button type="submit" style="width:80px; background-color: red;color: white;padding:5px 12px;
+        margin:4px 0; border: none; border-radius: 4px; cursor: pointer;">
+            Delete
+        </button>
+    </form>
+</div>
+
+<h2>User List</h2>
+<table border="1" style="border: 1px solid black">
+    <tr style="background-color: gray">
+        <th style="width: 30px">ID</th>
+        <th style="width: 100px">Name</th>
+        <th style="width: 120px">NRIC</th>
+        <th style="width: 100px">DOB</th>
+        <th style="width: 50px">Age</th>
+    </tr>
+    @foreach (User usr in Model.usrList)
+    {
+        <tr>
+            <td>@usr.UserID</td>
+            <td>@usr.Name</td>
+            <td>@usr.NRIC</td>
+            <td>@usr.DOB</td>
+            <td align="center">@usr.Age</td>
+        </tr>
+    }
+</table>
